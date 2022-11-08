@@ -1,0 +1,14 @@
+{
+  "name": "oci-devops-build-spec-validator",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "OCI DevOps - build.spec.yaml simple validator tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shukawam",
+  "license": "ISC",
+  "dependencies": {
+    "yaml-schema-validator": "^1.2.3"
+  }
+}

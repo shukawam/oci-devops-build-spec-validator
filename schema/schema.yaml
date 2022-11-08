@@ -1,0 +1,91 @@
+---
+version:
+  type: number
+  required: true
+component:
+  type: string
+  required: true
+timeoutInSeconds:
+  type: number
+shell:
+  type: string
+  required: true
+failImmediatelyOnError:
+  type: boolean
+env:
+  variables:
+    key:
+      type: string
+  vaultVariables:
+    key:
+      type: string
+  exportedVariables:
+    - type: string
+
+inputArtifacts:
+  - name: 
+      type: string
+    type: 
+      type: string
+    artifactId: 
+      type: string
+    registryId:
+      type: string
+    path:
+      type: string
+    version:
+      type: string
+    location:
+      type: string
+
+steps:
+    ### common 
+  - type:
+      type: string
+      required: true
+    name:
+      type: string
+      required: true
+    ### type: Command
+    shell:
+      type: string
+      required: false
+    timeoutInSeconds:
+      type: number
+      required: false
+    failImmediatelyOnError:
+      type: boolean
+      required: false
+    command:
+      type: string
+    onFailure:
+      - type:
+          type: string
+        command:
+          type: string
+        timeoutInSeconds:
+          type: number
+    ### type: VulnerabilityAudit
+    configuration:
+      buildType:
+        type: string
+      pomFilePath:
+        type: string
+      maxPermissibleCvssV2Score:
+        type: number
+      maxPermissibleCvssV3Score:
+        type: number
+    knowledgeBaseId:
+      type: string
+    vulnerabilityAuditCompartmentId:
+      type: string
+    vulnerabilityAuditName:
+      type: string
+
+outputArtifacts:
+  - name:
+      type: string
+    type:
+      type: string
+    location:
+      type: string
